@@ -1,4 +1,9 @@
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Routes, Route, Link } from 'react-router-dom';
+import Home from './components/home';
+import Login from './components/login';
+import Register from './components/dashboard';
+
 function App() {
   return (
     <div>
@@ -14,7 +19,12 @@ function App() {
               <a className="nav-link" href="#">Dashboard</a>
             </li>
           </ul>
-        </nav>
+      </nav>
+      <div className="container" >
+        <Routes>
+            <Route path="/" element={<Home />} />
+          </Routes>
+      </div>
     </div>
   );
 }
